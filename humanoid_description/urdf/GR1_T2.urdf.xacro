@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot name="GR1_T2" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:include filename="$(find humanoid_description)/urdf/GR1_T2.xacro" />
+  <xacro:include filename="$(find humanoid_description)/urdf/GR1_T2.ros2_control.xacro" />
+  
+  <link name="world"/>
+
+  <xacro:GR1_T2 parent="world">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:GR1_T2>
+
+  <xacro:GR1_T2_ros2_control name="GR1_T2_ros2_control" />
+</robot>

@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: humanoid_description
+    relative_path: urdf/GR1_T2.urdf.xacro
+  srdf:
+    relative_path: config/GR1_T2.srdf
+  package_settings:
+    author_name: TaiTing
+    author_email: errrr0501done@gmail.com
+    generated_timestamp: 1736428929
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

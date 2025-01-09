@@ -1,0 +1,152 @@
+# This config file is used by ros2_control
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+
+    left_index_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    left_middle_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    left_ring_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    left_pinky_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    left_thumb_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    right_index_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    right_middle_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    right_ring_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    right_pinky_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    right_thumb_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+left_index_controller:
+  ros__parameters:
+    joints:
+      - L_index_proximal_joint
+      - L_index_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+left_middle_controller:
+  ros__parameters:
+    joints:
+      - L_middle_proximal_joint
+      - L_middle_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+left_ring_controller:
+  ros__parameters:
+    joints:
+      - L_ring_proximal_joint
+      - L_ring_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+left_pinky_controller:
+  ros__parameters:
+    joints:
+      - L_pinky_proximal_joint
+      - L_pinky_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+left_thumb_controller:
+  ros__parameters:
+    joints:
+      - L_thumb_proximal_yaw_joint
+      - L_thumb_proximal_pitch_joint
+      - L_thumb_intermediate_joint
+      - L_thumb_distal_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+right_index_controller:
+  ros__parameters:
+    joints:
+      - R_index_proximal_joint
+      - R_index_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+right_middle_controller:
+  ros__parameters:
+    joints:
+      - R_middle_proximal_joint
+      - R_middle_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+right_ring_controller:
+  ros__parameters:
+    joints:
+      - R_ring_proximal_joint
+      - R_ring_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+right_pinky_controller:
+  ros__parameters:
+    joints:
+      - R_pinky_proximal_joint
+      - R_pinky_intermediate_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity
+right_thumb_controller:
+  ros__parameters:
+    joints:
+      - R_thumb_proximal_yaw_joint
+      - R_thumb_proximal_pitch_joint
+      - R_thumb_intermediate_joint
+      - R_thumb_distal_joint
+    command_interfaces:
+      - position
+    state_interfaces:
+      - position
+      - velocity

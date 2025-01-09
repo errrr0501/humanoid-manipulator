@@ -1,0 +1,27 @@
+# Default initial positions for GR1_T2's ros2_control fake system
+
+initial_positions:
+  L_index_intermediate_joint: 0
+  L_index_proximal_joint: 0
+  L_middle_intermediate_joint: 0
+  L_middle_proximal_joint: 0
+  L_pinky_intermediate_joint: 0
+  L_pinky_proximal_joint: 0
+  L_ring_intermediate_joint: 0
+  L_ring_proximal_joint: 0
+  L_thumb_distal_joint: 0
+  L_thumb_intermediate_joint: 0
+  L_thumb_proximal_pitch_joint: 0
+  L_thumb_proximal_yaw_joint: 0
+  R_index_intermediate_joint: 0
+  R_index_proximal_joint: 0
+  R_middle_intermediate_joint: 0
+  R_middle_proximal_joint: 0
+  R_pinky_intermediate_joint: 0
+  R_pinky_proximal_joint: 0
+  R_ring_intermediate_joint: 0
+  R_ring_proximal_joint: 0
+  R_thumb_distal_joint: 0
+  R_thumb_intermediate_joint: 0
+  R_thumb_proximal_pitch_joint: 0
+  R_thumb_proximal_yaw_joint: 0
