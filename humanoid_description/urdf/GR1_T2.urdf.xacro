@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <robot name="GR1_T2" xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:arg name="ros2_control_hardware_type" default="mock_components" />
   <xacro:include filename="$(find humanoid_description)/urdf/GR1_T2.xacro" />
   <xacro:include filename="$(find humanoid_description)/urdf/GR1_T2.ros2_control.xacro" />
   
@@ -9,5 +10,5 @@
     <origin xyz="0 0 0" rpy="0 0 0" />
   </xacro:GR1_T2>
 
-  <xacro:GR1_T2_ros2_control name="GR1_T2_ros2_control" />
+  <xacro:GR1_T2_ros2_control name="GR1_T2_ros2_control" ros2_control_hardware_type="$(arg ros2_control_hardware_type)" />
 </robot>

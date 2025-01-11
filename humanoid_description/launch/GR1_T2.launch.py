@@ -23,7 +23,7 @@ import xacro
 
 
 def generate_launch_description():
-    robot_name = "small_arm"
+    robot_name = "GR1_T2"
     package_name = robot_name + "_description"
     rviz_config = os.path.join(get_package_share_directory(
         package_name), "launch", robot_name + ".rviz")

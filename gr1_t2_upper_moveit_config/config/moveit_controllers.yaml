@@ -1,0 +1,139 @@
+# MoveIt uses this configuration for controller management
+
+moveit_controller_manager: moveit_simple_controller_manager/MoveItSimpleControllerManager
+
+moveit_simple_controller_manager:
+  controller_names:
+    - left_index_controller
+    - left_middle_controller
+    - left_ring_controller
+    - left_pinky_controller
+    - left_thumb_controller
+    - right_index_controller
+    - right_middle_controller
+    - right_ring_controller
+    - right_pinky_controller
+    - right_thumb_controller
+    - left_arm_controller
+    - right_arm_controller
+
+  left_index_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - L_index_proximal_joint
+      - L_index_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  left_middle_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - L_middle_proximal_joint
+      - L_middle_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  left_ring_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - L_ring_proximal_joint
+      - L_ring_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  left_pinky_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - L_pinky_proximal_joint
+      - L_pinky_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  left_thumb_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - L_thumb_proximal_yaw_joint
+      - L_thumb_proximal_pitch_joint
+      - L_thumb_intermediate_joint
+      - L_thumb_distal_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  right_index_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - R_index_proximal_joint
+      - R_index_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  right_middle_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - R_middle_proximal_joint
+      - R_middle_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  right_ring_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - R_ring_proximal_joint
+      - R_ring_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  right_pinky_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - R_pinky_proximal_joint
+      - R_pinky_intermediate_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  right_thumb_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - R_thumb_proximal_yaw_joint
+      - R_thumb_proximal_pitch_joint
+      - R_thumb_intermediate_joint
+      - R_thumb_distal_joint
+    action_ns: follow_joint_trajectory
+    default: true
+  left_arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - l_shoulder_pitch
+      - l_shoulder_roll
+      - l_shoulder_yaw
+      - l_elbow_pitch
+      - l_wrist_yaw
+      - l_wrist_roll
+    action_ns: follow_joint_trajectory
+    default: true
+  right_arm_controller:
+    type: FollowJointTrajectory
+    action_ns: follow_joint_trajectory
+    default: true
+    joints:
+      - r_shoulder_pitch
+      - r_shoulder_roll
+      - r_shoulder_yaw
+      - r_elbow_pitch
+      - r_wrist_yaw
+      - r_wrist_roll
+    action_ns: follow_joint_trajectory
+    default: true
