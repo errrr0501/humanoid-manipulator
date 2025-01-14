@@ -87,7 +87,11 @@ ament_target_dependencies(
 
 install(TARGETS pose_goal
   DESTINATION lib/${PROJECT_NAME})
+install(TARGETS pose_goal_separate_execute
+  DESTINATION lib/${PROJECT_NAME})
 install(TARGETS joint_goal
+  DESTINATION lib/${PROJECT_NAME})
+install(TARGETS joint_goal_separate_execute
   DESTINATION lib/${PROJECT_NAME})
 install(TARGETS cartesian_path
   DESTINATION lib/${PROJECT_NAME})
