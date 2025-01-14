@@ -148,6 +148,11 @@ joint_limits:
     max_velocity: 7.3299998999999998
     has_acceleration_limits: false
     max_acceleration: 0
+  l_wrist_pitch:
+    has_velocity_limits: true
+    max_velocity: 27.9599999
+    has_acceleration_limits: false
+    max_acceleration: 0
   l_wrist_roll:
     has_velocity_limits: true
     max_velocity: 27.9599999
@@ -176,6 +181,11 @@ joint_limits:
   r_shoulder_yaw:
     has_velocity_limits: true
     max_velocity: 7.3299998999999998
+    has_acceleration_limits: false
+    max_acceleration: 0
+  r_wrist_pitch:
+    has_velocity_limits: true
+    max_velocity: 27.9599999
     has_acceleration_limits: false
     max_acceleration: 0
   r_wrist_roll:

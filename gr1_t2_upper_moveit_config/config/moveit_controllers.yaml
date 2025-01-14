@@ -122,8 +122,7 @@ moveit_simple_controller_manager:
       - l_elbow_pitch
       - l_wrist_yaw
       - l_wrist_roll
-    action_ns: follow_joint_trajectory
-    default: true
+      - l_wrist_pitch
   right_arm_controller:
     type: FollowJointTrajectory
     action_ns: follow_joint_trajectory
@@ -135,5 +134,4 @@ moveit_simple_controller_manager:
       - r_elbow_pitch
       - r_wrist_yaw
       - r_wrist_roll
-    action_ns: follow_joint_trajectory
-    default: true
+      - r_wrist_pitch

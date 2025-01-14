@@ -167,6 +167,7 @@ left_arm_controller:
       - l_elbow_pitch
       - l_wrist_yaw
       - l_wrist_roll
+      - l_wrist_pitch
     command_interfaces:
       - position
     state_interfaces:
@@ -181,6 +182,7 @@ right_arm_controller:
       - r_elbow_pitch
       - r_wrist_yaw
       - r_wrist_roll
+      - r_wrist_pitch
     command_interfaces:
       - position
     state_interfaces:

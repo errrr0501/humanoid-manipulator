@@ -81,13 +81,16 @@ from omni.isaac.core.utils import (  # noqa E402
 )
 from omni.isaac.core_nodes.scripts.utils import set_target_prims  # noqa E402
 from pxr import Gf  # noqa E402
-
+from omni.isaac.core import World
 
 
 extensions.enable_extension("omni.isaac.ros2_bridge")
 
 simulation_context = SimulationContext(stage_units_in_meters=1.0)
 
+# physics_dt=1.0 / 60.0,
+# rendering_dt=1.0 / 60.0
+# my_world = World(physics_dt=physics_dt, rendering_dt=rendering_dt, stage_units_in_meters=1.0)
 
 def main():
     # # create a curobo motion gen instance:
@@ -117,6 +120,8 @@ def main():
         usd_path=ROBOT_USD_PATH,
     )
 
+    # my_world.scene.add(ROBOT_STAGE_PATH)
+
     simulation_app.update()
 
 
@@ -135,7 +140,7 @@ def main():
         og_keys_set_values = [
             ("Context.inputs:domain_id", ros_domain_id),
             # Set the /Franka target prim to Articulation Controller node
-            ("ArticulationController.inputs:robotPath", ROBOT_STAGE_PATH),
+            ("ArticulationController.inputs:robotPath", ROBOT_STAGE_PATH+"/base"),
             ("PublishJointState.inputs:topicName", "isaac_joint_states"),
             ("SubscribeJointState.inputs:topicName", "isaac_joint_commands"),
             # ("createViewport.inputs:name", REALSENSE_VIEWPORT_NAME),
@@ -250,10 +255,80 @@ def main():
         print(e)
 
 
-    # Setting the /GE1_T2 target prim to Publish JointState node
+    # Setting the /GR1_T2 target prim to Publish JointState node
     set_target_prims(
         primPath="/ActionGraph/PublishJointState", targetPrimPaths=[ROBOT_STAGE_PATH + "/base"]
     )
+    # try:
+    #     og.Controller.edit(
+    #         {"graph_path": "/ActionGraph", "evaluator_name": "execution"},
+    #         {
+    #             og.Controller.Keys.CREATE_NODES: [
+    #                 ("OnImpulseEvent", "omni.graph.action.OnImpulseEvent"),
+    #                 ("ReadSimTime", "omni.isaac.core_nodes.IsaacReadSimulationTime"),
+    #                 ("Context", "omni.isaac.ros2_bridge.ROS2Context"),
+    #                 ("PublishJointState", "omni.isaac.ros2_bridge.ROS2PublishJointState"),
+    #                 (
+    #                     "SubscribeJointState",
+    #                     "omni.isaac.ros2_bridge.ROS2SubscribeJointState",
+    #                 ),
+    #                 (
+    #                     "ArticulationController",
+    #                     "omni.isaac.core_nodes.IsaacArticulationController",
+    #                 ),
+    #                 ("PublishClock", "omni.isaac.ros2_bridge.ROS2PublishClock"),
+    #             ],
+    #             og.Controller.Keys.CONNECT: [
+    #                 ("OnImpulseEvent.outputs:execOut", "PublishJointState.inputs:execIn"),
+    #                 ("OnImpulseEvent.outputs:execOut", "SubscribeJointState.inputs:execIn"),
+    #                 ("OnImpulseEvent.outputs:execOut", "PublishClock.inputs:execIn"),
+    #                 (
+    #                     "OnImpulseEvent.outputs:execOut",
+    #                     "ArticulationController.inputs:execIn",
+    #                 ),
+    #                 ("Context.outputs:context", "PublishJointState.inputs:context"),
+    #                 ("Context.outputs:context", "SubscribeJointState.inputs:context"),
+    #                 ("Context.outputs:context", "PublishClock.inputs:context"),
+    #                 (
+    #                     "ReadSimTime.outputs:simulationTime",
+    #                     "PublishJointState.inputs:timeStamp",
+    #                 ),
+    #                 ("ReadSimTime.outputs:simulationTime", "PublishClock.inputs:timeStamp"),
+    #                 (
+    #                     "SubscribeJointState.outputs:jointNames",
+    #                     "ArticulationController.inputs:jointNames",
+    #                 ),
+    #                 (
+    #                     "SubscribeJointState.outputs:positionCommand",
+    #                     "ArticulationController.inputs:positionCommand",
+    #                 ),
+    #                 (
+    #                     "SubscribeJointState.outputs:velocityCommand",
+    #                     "ArticulationController.inputs:velocityCommand",
+    #                 ),
+    #                 (
+    #                     "SubscribeJointState.outputs:effortCommand",
+    #                     "ArticulationController.inputs:effortCommand",
+    #                 ),
+    #             ],
+    #             og.Controller.Keys.SET_VALUES: [
+    #                 ("Context.inputs:useDomainIDEnvVar", 1),
+    #                 # Setting the /UR target prim to Articulation Controller node
+    #                 # ("ArticulationController.inputs:usePath", True),
+    #                 ("ArticulationController.inputs:robotPath", ROBOT_STAGE_PATH+ "/base"),
+    #                 ("PublishJointState.inputs:topicName", "isaac_joint_states"),
+    #                 ("SubscribeJointState.inputs:topicName", "isaac_joint_commands"),
+    #             ],
+    #         },
+    #     )
+
+    # except Exception as e:
+    #     print(e)
+
+    # # Setting the /UR target prim to Publish JointState node
+    # set_target_prims(
+    #     primPath="/ActionGraph/PublishJointState", targetPrimPaths=[ROBOT_STAGE_PATH + "/base"]
+    # )
 
     simulation_app.update()
 
@@ -261,7 +336,7 @@ def main():
     # need to initialize physics getting any articulation..etc
     simulation_context.initialize_physics()
 
-    simulation_context.play()
+    # simulation_context.play()
     # input()
 
     while simulation_app.is_running():

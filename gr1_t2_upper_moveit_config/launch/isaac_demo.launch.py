@@ -34,12 +34,24 @@ def generate_launch_description():
         .to_moveit_configs()
     )
 
+    planning_scene_monitor_parameters = {
+        "publish_planning_scene": True,
+        "publish_geometry_updates": True,
+        "publish_state_updates": True,
+        "publish_transforms_updates": True,
+    }
+
+
     # Start the actual move_group node/action server
     move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[moveit_config.to_dict()],
+        parameters=[
+            moveit_config.to_dict(),
+            planning_scene_monitor_parameters,
+            {"use_sim_time": True},
+            ],
         arguments=["--ros-args", "--log-level", "info"],
     )
 
@@ -71,7 +83,7 @@ def generate_launch_description():
         executable="static_transform_publisher",
         name="static_transform_publisher",
         output="log",
-        arguments=["0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "world", "Root"],
+        arguments=["0.0", "0.0", "0.953", "0.0", "0.0", "0.0", "world", "Root"],
     )
 
     # Publish TF

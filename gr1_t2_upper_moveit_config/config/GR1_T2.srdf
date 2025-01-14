@@ -40,10 +40,10 @@
         <chain base_link="R_hand_base_link" tip_link="R_thumb_distal"/>
     </group>
     <group name="left_arm">
-        <chain base_link="link_torso" tip_link="l_hand_roll"/>
+        <chain base_link="link_torso" tip_link="L_hand_base_link"/>
     </group>
     <group name="right_arm">
-        <chain base_link="link_torso" tip_link="r_hand_roll"/>
+        <chain base_link="link_torso" tip_link="R_hand_base_link"/>
     </group>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="L_hand_base_link" link2="L_index_intermediate" reason="Never"/>
