@@ -10,122 +10,122 @@ default_acceleration_scaling_factor: 0.1
 joint_limits:
   L_index_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_index_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_middle_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_middle_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_pinky_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_pinky_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_ring_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_ring_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_thumb_distal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_thumb_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_thumb_proximal_pitch_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   L_thumb_proximal_yaw_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_index_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_index_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_middle_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_middle_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_pinky_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_pinky_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_ring_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_ring_proximal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_thumb_distal_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_thumb_intermediate_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_thumb_proximal_pitch_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   R_thumb_proximal_yaw_joint:
     has_velocity_limits: true
-    max_velocity: 28.5
+    max_velocity: 0.5
     has_acceleration_limits: false
     max_acceleration: 0
   l_elbow_pitch:
